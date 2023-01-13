@@ -1,7 +1,7 @@
 import winston from '../assets/img/winstonCat.jpg'
-import otho from '../assets/img/othoCat.jpg'
-import charlieBrown from '../assets/img/charlieBrownCat.jpg';
-import barracuda from '../assets/img/barracudaCat.jpg';
+import otho from '../assets/img/othoCat.jpeg'
+import charlieBrown from '../assets/img/charlieBrownCat.jpeg';
+import barracuda from '../assets/img/barracudaCat.jpeg';
 
 export const CATS = [
     {
