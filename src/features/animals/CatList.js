@@ -1,11 +1,13 @@
 import { Row, Col } from "reactstrap";
-import { CATS } from "../../app/shared/CATS";
 import AnimalCard from "./AnimalCard";
+import { selectAllCats } from "../adopt/catSlice";
 
 const CatList = () => {
+    const cats = selectAllCats();
+
     return (
         <Row className='ms-auto'>
-            {CATS.map((cat) => {
+            {cats.map((cat) => {
                 return (
                     <Col
                         md='5'
