@@ -1,19 +1,20 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './pages/HomePage';
+import ContactPage from './pages/ContactPage';
+import AdoptPage from './pages/AdoptPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import DogList from './features/animals/DogList';
-import CatList from './features/animals/CatList';
-import AdoptCatPage from './pages/AdoptCatPage';
-import AdoptDogPage from './pages/AdoptDogPage';
 
 function App() {
     return (
         <div className='App'>
-            {/*<Header /> */}
-            {/* <DogList /> */}
-            {/* <CatList /> */}
-            <AdoptCatPage />
-            <AdoptDogPage />
+            <Header />
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='contact' element={<ContactPage />} />
+                <Route path='adopt' element={<AdoptPage />} />
+            </Routes>
             <Footer />
         </div>
     );
