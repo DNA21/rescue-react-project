@@ -12,7 +12,7 @@ function App() {
             {/*<Header /> */}
             {/* <DogList /> */}
             {/* <CatList /> */}
-            {/* <AdoptCatPage /> */}
+            <AdoptCatPage />
             <AdoptDogPage />
             <Footer />
         </div>

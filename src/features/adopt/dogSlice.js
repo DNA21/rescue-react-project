@@ -4,6 +4,6 @@ export const selectAllDogs = () => {
     return DOGS;
 };
 
-export const selectRandomDog = () => {
-    return DOGS[Math.floor(DOGS.length * Math.random())];
-};
+export const selectDogById = (id) => {
+    return DOGS.find((dog) => dog.id === id);
+}

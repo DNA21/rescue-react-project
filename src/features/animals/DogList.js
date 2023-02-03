@@ -2,7 +2,7 @@ import { Row, Col } from "reactstrap";
 import AnimalCard from "./AnimalCard";
 import { selectAllDogs } from "../adopt/dogSlice";
 
-const DogList = () => {
+const DogList = ({ setAnimalId }) => {
     const dogs = selectAllDogs();
 
     return (
@@ -13,6 +13,7 @@ const DogList = () => {
                         md='5'
                         className='m-4'
                         key={dog.id}
+                        onClick={() => setAnimalId(dog.id)}
                     >
                         <AnimalCard animal={dog} />
                     </Col>

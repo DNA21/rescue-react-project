@@ -4,6 +4,6 @@ export const selectAllCats = () => {
     return CATS;
 }
 
-export const selectRandomCat = () => {
-    return CATS[Math.floor(CATS.length * Math.random())];
-}
+export const selectCatById = (id) => {
+    return CATS.find((cat) => cat.id === id);
+};
