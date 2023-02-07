@@ -1,21 +1,21 @@
 import { Row, Col } from "reactstrap";
 import AnimalCard from "./AnimalCard";
-import { selectAllDogs } from "../adopt/dogSlice";
+import { selectAllAnimals } from "./animalSlice";
 
-const DogList = ({ setAnimalId }) => {
-    const dogs = selectAllDogs();
+const AnimalList = ({ setAnimalId }) => {
+    const animals = selectAllAnimals();
 
     return (
         <Row className='ms-auto'>
-            {dogs.map((dog) => {
+            {animals.map((animal) => {
                 return (
                     <Col
                         md='5'
                         className='m-4'
-                        key={dog.id}
-                        onClick={() => setAnimalId(dog.id)}
+                        key={animal.id}
+                        onClick={() => setAnimalId(animal.id)}
                     >
-                        <AnimalCard animal={dog} />
+                        <AnimalCard animal={animal} />
                     </Col>
                 );
             })}
@@ -23,4 +23,4 @@ const DogList = ({ setAnimalId }) => {
     );
 };
 
-export default DogList;
+export default AnimalList;
