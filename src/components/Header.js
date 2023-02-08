@@ -35,6 +35,11 @@ const Header = () => {
                                 Adopt
                             </DropdownToggle>
                             <DropdownMenu right>
+                            <DropdownItem>
+                                    <NavItem>
+                                        <NavLink className='nav-link text-black' to='adopt'>All Animals</NavLink>
+                                    </NavItem>
+                                </DropdownItem>
                                 <DropdownItem>
                                     <NavItem>
                                         <NavLink className='nav-link text-black' to='adopt'>Dogs</NavLink>

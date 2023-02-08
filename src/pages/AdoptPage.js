@@ -9,18 +9,25 @@ import Buttons from '../components/Button';
 const AdoptPage = () => {
     const [animalId, setAnimalId] = useState(0);
     const selectedAnimal = useSelector(selectAnimalById(animalId));
-    const allAnimals = useSelector(selectAllAnimals);
 
+    const allAnimals = useSelector(selectAllAnimals);
     const [menuItem, setMenuItem] = useState(allAnimals);
 
+    const allAnimalTypes = ['All', ...new Set(allAnimals.map(animals => animals.animal))];
+    const [buttonType, setButtonType] = useState(allAnimalTypes);
+
     const filter = (button) => {
+        if(button==='All'){
+            setMenuItem(allAnimals);
+            return;
+        };
         const filteredAnimals = allAnimals.filter(animal => animal.animal === button);
         setMenuItem(filteredAnimals);
     };
 
     return (
         <Container>
-            <Buttons filter={filter} />
+            <Buttons buttonType={buttonType} filter={filter} />
             <Row>
                 <Col sm='5' md='7'>
                     <AnimalList menuItem={menuItem} setAnimalId = {setAnimalId} />

@@ -1,12 +1,21 @@
-import { Col, Button } from "reactstrap"
+import { Button } from "reactstrap"
 
-const Buttons = ({filter}) => {
+const Buttons = ({buttonType, filter}) => {
     return (
-        <>
-            <Button onClick={() => filter('dog')}>Dogs</Button>
-            <Button onClick={() => filter('cat')}>Cats</Button>
-        </>
+        <div className='buttons'>
+            {
+                buttonType.map((animalType, i)=>{
+                    return (
+                        <Button
+                            className='btn'
+                            onClick={()=>filter(animalType)}
+                        >
+                            {animalType}
+                        </Button>)
+                })
+            }
+        </div>
     )
-}
+};
 
 export default Buttons;

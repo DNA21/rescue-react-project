@@ -42,7 +42,7 @@ h2 {
 
 .navbar-brand,
 .nav-link {
-  color: white !important;
+  color: white;
 }
 
 .navbar-brand img {
@@ -84,4 +84,16 @@ h2 {
 .page-exit-active {
   opacity: 0;
   transition: 300ms ease-in;
+}
+
+.buttons {
+  width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.btn {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  margin: 1rem;
 }
