@@ -1,4 +1,5 @@
 import { Container, Col, Row } from "reactstrap";
+import ContactForm from "../components/ContactForm";
 
 
 const ContactPage = () => {
@@ -42,7 +43,9 @@ const ContactPage = () => {
                     <h2>Contact Us</h2>
                     <hr />
                 </Col>
-                <Col md='10'>Contact Form</Col>
+                <Col md='10'>
+                    <ContactForm />
+                </Col>
             </Row>
         </Container>
     )
