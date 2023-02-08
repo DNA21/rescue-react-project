@@ -1,9 +1,8 @@
 import { Row, Col } from "reactstrap";
 import AnimalCard from "./AnimalCard";
-import { selectAllAnimals } from "./animalSlice";
 
-const AnimalList = ({ setAnimalId }) => {
-    const animals = selectAllAnimals();
+const AnimalList = ({ setAnimalId, menuItem }) => {
+    const animals = menuItem;
 
     return (
         <Row className='ms-auto'>
